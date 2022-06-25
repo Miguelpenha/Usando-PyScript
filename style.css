@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #212121;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+}
+
+#title {
+    font-size: 4vw;
+    color: #00a6ff;
+    font-weight: bold;
+    align-self: center;
+}
