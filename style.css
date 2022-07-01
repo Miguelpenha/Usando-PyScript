@@ -6,21 +6,32 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     background-color: #212121;
 }
 
-main {
-    width: 100%;
+header {
     display: flex;
-    margin-top: 10%;
+    padding-top: 4%;
+    justify-content: center;
+}
+
+header>#logo {
+    width: 15%;
+}
+
+main {
+    display: flex;
+    margin-top: 5%;
     flex-direction: column;
 }
 
 #title {
-    font-size: 4vw;
-    color: #00a6ff;
+    font-size: 3.5vw;
+    color: #0077BB;
     font-weight: bold;
     align-self: center;
+}
+
+#title>.highlighted  {
+    color: #FEC106;
 }

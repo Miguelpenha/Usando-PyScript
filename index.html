@@ -12,17 +12,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <header>
+        <img src="img/Logo.svg" id="logo" alt="Logo">
+    </header>
     <main>
-        <h1 id="title"></h1>
+        <h1 id="title">
+            Olá, agora são 
+            <span id="hour" class="highlighted"></span> 
+            e a data é 
+            <span class="highlighted" id="date"></span>
+        </h1>
     </main>
     <py-script>
         from datetime import datetime
 
-        word = f'Olá, agora são {datetime.now().strftime("%H:%M e a data é %d/%m/%Y")}'
+        date = datetime.now()
+
+        hour = date.strftime("%H:%M")
+        day = date.strftime("%d/%m/%Y")
         
-        pyscript.write('title', word)
+        pyscript.write('hour', hour)
+        pyscript.write('date', day)
     </py-script>
 </body>
 </html>
